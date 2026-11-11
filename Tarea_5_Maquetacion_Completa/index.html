@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio informativo de Ingeniería en Sistemas Computacionales del Instituto Tecnológico de Mérida.">
+  <title>Instituto Tecnológico de Mérida | Sistemas Computacionales</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="validaciones.js" defer></script>
+</head>
+<body>
+  <div class="pagina ancho">
+    <!-- ENCABEZADO: LOGOTIPO Y FORMULARIO -->
+    <header class="encabezado" id="inicio">
+      <a class="logo-superior" href="#inicio" aria-label="Volver al inicio">
+        <img src="imagenes/logotransparente.png" alt="Escudo del Instituto Tecnológico de Mérida">
+      </a>
+
+      <form class="formulario-registro" id="registro" autocomplete="on">
+        <div class="fila-formulario fila-principal">
+          <div class="campo campo-nombre">
+            <label for="nombre"><span class="obligatorio">*</span> Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name">
+          </div>
+          <div class="campo campo-correo">
+            <label for="correo"><span class="obligatorio">*</span> Email:</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email">
+          </div>
+          <div class="campo campo-sexo" role="group" aria-label="Sexo">
+            <span class="etiqueta-sexo">Sexo:</span>
+            <label><input type="radio" name="sexo" value="M" required> M</label>
+            <label><input type="radio" name="sexo" value="H" required> H</label>
+          </div>
+        </div>
+
+        <div class="fila-formulario fila-nacimiento">
+          <label class="etiqueta-fecha" for="dia">Fecha de nacimiento:</label>
+          <div class="selecciones-fecha">
+            <select id="dia" name="dia" required aria-label="Día de nacimiento">
+              <option value="">día</option>
+            </select>
+            <select id="mes" name="mes" required aria-label="Mes de nacimiento">
+              <option value="">mes</option>
+              <option value="1">enero</option><option value="2">febrero</option>
+              <option value="3">marzo</option><option value="4">abril</option>
+              <option value="5">mayo</option><option value="6">junio</option>
+              <option value="7">julio</option><option value="8">agosto</option>
+              <option value="9">septiembre</option><option value="10">octubre</option>
+              <option value="11">noviembre</option><option value="12">diciembre</option>
+            </select>
+            <select id="anio" name="anio" required aria-label="Año de nacimiento">
+              <option value="">año</option>
+            </select>
+          </div>
+          <button class="boton-enviar" type="submit">Enviar</button>
+        </div>
+        <p class="mensaje-formulario" id="mensaje-formulario" role="status" aria-live="polite"></p>
+      </form>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu-principal" aria-label="Navegación principal">
+      <a class="activo" href="#inicio">Inicio</a>
+      <a href="#perfil">Requisitos</a>
+      <a href="#docentes">Materias</a>
+      <a href="#prestigio">Organigrama</a>
+      <a href="#instalaciones">Instalaciones</a>
+      <a href="#registro">Inscripciones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- IMAGEN PRINCIPAL -->
+    <section class="portada" aria-label="Edificio de Sistemas Computacionales">
+      <img src="imagenes/fotoslide.jpg" alt="Edificio de Sistemas Computacionales del Instituto Tecnológico de Mérida">
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+      <section class="tarjetas" aria-label="Información del instituto">
+        <article class="tarjeta" id="prestigio">
+          <div class="cabecera-tarjeta">
+            <img class="engrane" src="imagenes/engrane.png" alt="">
+            <h2 class="titulo-prestigio">UNIVERSIDAD<br>DE PRESTIGIO</h2>
+          </div>
+          <img class="imagen-tarjeta" src="imagenes/foto1.jpg" alt="Mural a la entrada del Instituto Tecnológico de Mérida">
+          <p class="descripcion-tarjeta">Puede que después de tu carrera quieras estudiar una maestría o un doctorado que te permita especializarte. Hay oportunidades muy interesantes para estudiar con buenas becas en el extranjero.</p>
+        </article>
+
+        <article class="tarjeta" id="docentes">
+          <div class="cabecera-tarjeta">
+            <img class="engrane" src="imagenes/engrane.png" alt="">
+            <h2>DOCENTES</h2>
+          </div>
+          <img class="imagen-tarjeta" src="imagenes/foto2.jpg" alt="Docentes y estudiantes en un aula de computación">
+          <p class="descripcion-tarjeta">Phasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi. Maecenas et turpis vitae velit volutpat porttitor a sit amet est. Ut hasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi.</p>
+        </article>
+
+        <article class="tarjeta" id="instalaciones">
+          <div class="cabecera-tarjeta">
+            <img class="engrane" src="imagenes/engrane.png" alt="">
+            <h2>INSTALACIONES</h2>
+          </div>
+          <div class="galeria-instalaciones">
+            <img src="imagenes/instalaciones1.jpg" alt="Laboratorio de computación">
+            <img src="imagenes/instalaciones2.jpg" alt="Alumnos trabajando con computadoras">
+            <img src="imagenes/instalaciones3.jpg" alt="Alumnos en las instalaciones del instituto">
+          </div>
+        </article>
+      </section>
+
+      <!-- PERFIL DEL EGRESADO Y CAMPO DE TRABAJO -->
+      <section class="seccion-inferior">
+        <article class="perfil" id="perfil">
+          <h2>Perfil del Egresado</h2>
+          <ul class="lista-perfil">
+            <li>Desarrollar, implementar y administrar software de sistemas o de aplicación que cumpla con los estándares de calidad con el fin de apoyar la productividad y competitividad de las organizaciones.</li>
+            <li>Seleccionar y aplicar herramientas matemáticas para el modelado, diseño y desarrollo de tecnología computacional.</li>
+            <li>Integrar diversas soluciones computacionales que requieran el uso de las diferentes tecnologías, plataformas o dispositivos.</li>
+            <li>Diseñar, desarrollar y administrar bases de datos conforme a requerimientos definidos, normas organizacionales de manejo y seguridad de la información, utilizando tecnologías emergentes.</li>
+          </ul>
+        </article>
+
+        <aside class="campo-trabajo" id="trabajo">
+          <h2>CAMPO DE TRABAJO</h2>
+          <p>Empresas y organismos en todos los campos de la actividad económica, gubernamental y de educación, en donde se puedan optimizar los procesos al automatizar el manejo de la información de las empresas.</p>
+          <a href="#contacto" class="boton-ver-mas">ver mas</a>
+        </aside>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina" id="contacto">
+      <section class="datos-instituto" aria-label="Datos de contacto">
+        <h2>INSTITUTO TECNOLÓGICO DE MÉRIDA</h2>
+        <p>Av. Tecnológico km. 4.5 S/N C.P. 97118</p>
+        <p>Preguntas y comentarios:<br><a href="mailto:www@itmerida.mx">www@itmerida.mx</a></p>
+        <p>Tel:(999) 964-5000, 964-5001</p>
+      </section>
+
+      <a class="ubicacion-mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Instituto+Tecnol%C3%B3gico+de+M%C3%A9rida" target="_blank" rel="noopener noreferrer" aria-label="Ver ubicación del Tecnológico de Mérida en Google Maps">
+        <img src="imagenes/mapa_itm.jpg" alt="Mapa de ubicación del Instituto Tecnológico de Mérida">
+      </a>
+
+      <section class="datos-alumno" aria-label="Datos del alumno">
+        <img src="imagenes/logotransparente.png" alt="Escudo del Instituto Tecnológico de Mérida">
+        <p>Nombre del alumno<br>Grupo<br>Materia</p>
+      </section>
+    </footer>
+    <div class="barra-final" aria-hidden="true"></div>
+  </div>
+
+
+</body>
+</html>
